@@ -7,9 +7,11 @@ import { useState } from 'react'
 
 import {Navbar, Footer, ThemeSettings, Sidebar} from './components';
 import {Ecommerce, Orders, Employees, Calendar, Stacked, Pyramid, Customers, Kanban, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Line} from './pages';
+import { useStateContext } from './contexts/ContextProvider';
+
 
 const App = () => {
-  const activeMenu=true;
+  const [activeMenu] = useStateContext();
   return (
     <div>
       <BrowserRouter>
