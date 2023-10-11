@@ -75,6 +75,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## About
 
 ## Components
+
+## App.js
+
+
 ### Sidebar
 - Icons were imported from React-icons
 - Link and NavLink were imported from React-router DOM. Tooltip component was imported from Syncfusion popups.
@@ -86,3 +90,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - For each item returned, the item title property is displayed. Under each of these, another loop is eexecuted. The purpose of this loop is to go through each of the returned items properties to the links property (which is an object) and return the values from each links.
 - So underneath every Item, the links under them are created. The details of the links shown are the link names and Icons. The icons are imported into the data file from react icons so they are rendered in the sidebar as components on their own.
 - Stylings were applied to the the components using tailwind css. Variables were created and the values assigned to these variables were tailwind css styles stored in strings. That way, styles can be rendered conditionally by rendering each variable conditionally. This is especially seen for the navlinks. 
+
+
+### NavBar
