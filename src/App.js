@@ -41,6 +41,9 @@ const {activeMenu} = useStateContext();
             </div>
           
           <div>
+
+          <ThemeSettings />
+
             <Routes>
               {/* Dashboard */}c
               <Route path='/' element={<Ecommerce/>} />
