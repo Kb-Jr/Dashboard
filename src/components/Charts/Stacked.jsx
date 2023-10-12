@@ -5,7 +5,7 @@ import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from '.
 
 const Stacked = ({width, height}) => {
   return (
-    <ChartComponent width={width} height={height} id='stack chart' primaryXAxis={stackedPrimaryXAxis} primaryYAxis={stackedPrimaryYAxis} chartArea={{border: {width:0}}} tooltip={{enable:true}} legendSettings={{background:'white'}}>
+    <ChartComponent width={width} height={height} id='charts' primaryXAxis={stackedPrimaryXAxis} primaryYAxis={stackedPrimaryYAxis} chartArea={{border: {width:0}}} tooltip={{enable:true}} legendSettings={{background:'white'}}>
       <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />
       <SeriesCollectionDirective>
         {stackedCustomSeries.map((item, i) =>
