@@ -11,14 +11,14 @@ import { useStateContext } from './contexts/ContextProvider';
 
 
 const App = () => {
-const {activeMenu, themeSettings, setthemeSettings} = useStateContext();
+const {activeMenu, themeSettings, setthemeSettings, currentColor, currentMode} = useStateContext();
   return (
-    <div>
+    <div className={currentMode === 'Dark' ? 'dark' : ''}>
       <BrowserRouter>
         <div className='flex relative dark:bg-main-dark-bg'>
           <div className='fixed right-4 bottom-4' style={{zIndex:'1000'}}>
               <TooltipComponent content="settings" position='top'>
-                  <button type='button' className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white' style={{background:'blue', borderRadius: '50%'}} onClick ={() => setthemeSettings(true)}>
+                  <button type='button' className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white' style={{background:currentColor, borderRadius: '50%'}} onClick ={() => setthemeSettings(true)}>
                     <FiSettings />
                   </button>
               </TooltipComponent>
@@ -34,7 +34,7 @@ const {activeMenu, themeSettings, setthemeSettings} = useStateContext();
           )}
           <div className={
               // use template string to avoid repitition of classes
-              `dark:bg-main-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}`
+              `dark:bg-main-dark-bg bg-main-bg min-h-screen w-full ${activeMenu ? 'md:ml-72' : 'flex-2'}`
           }>
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
