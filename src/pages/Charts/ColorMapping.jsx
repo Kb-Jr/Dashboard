@@ -19,7 +19,7 @@ const ColorMapping = () => {
           chartArea={{ border: { width: 0 } }}
           legendSettings={{ mode: 'Range', background: 'white' }}
           tooltip={{ enable: true }}
-          background={currentMode === 'Dark' ? '#fff' : '#fff'}
+          background={currentMode === 'Dark' ? '#333' : '#fff'}
         >
           <Inject services={[ColumnSeries, Tooltip, Category, Legend]} />
           <SeriesCollectionDirective>

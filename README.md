@@ -79,6 +79,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## App.js
 
 
+### Navbar
+
+### Pages
+
+
+### Charts
+
+
+### Apps
+
+
+### Mode and Themes
+
 ### Sidebar
 - Icons were imported from React-icons
 - Link and NavLink were imported from React-router DOM. Tooltip component was imported from Syncfusion popups.
