@@ -8,16 +8,16 @@ import { Header } from '../components';
 const Kanban = () => {
   return (
     <div className='m-2 md:m-10 mt-24 p-2 rounded-3xl md:p-10 bg-white'>
-    <Header category="App" title="Kanban"/>
-    <KanbanComponent id='kanban' dataSource={kanbanData} cardSettings={{contentField: 'Summary', headerField: 'Id'}} keyField='Status'>
-      <ColumnsDirective>
-        {kanbanGrid.map((item, i) => (
-          <ColumnDirective key={i} {...item} />
-        ))}
-      </ColumnsDirective>
-    </KanbanComponent>
+      <Header category="App" title="Kanban" />
+      <KanbanComponent id='kanban' dataSource={kanbanData} cardSettings={{ contentField: 'Summary', headerField: 'Id' }} keyField='Status'>
+        <ColumnsDirective>
+          {kanbanGrid.map((item, i) => (
+            <ColumnDirective key={i} {...item} />
+          ))}
+        </ColumnsDirective>
+      </KanbanComponent>
 
-  </div>
+    </div>
   )
 }
 

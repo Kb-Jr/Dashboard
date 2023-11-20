@@ -5,13 +5,13 @@ import { useStateContext } from '../../contexts/ContextProvider';
 
 
 const LineChart = () => {
-const {currentMode} = useStateContext();
+  const { currentMode } = useStateContext();
 
   return (
-    <ChartComponent id='line-chart' height='420px' primaryXAxis={LinePrimaryXAxis} primaryYAxis={LinePrimaryYAxis} chartArea={{border:{width:0}}} tooltip={{ enable:true }} background={currentMode === 'Dark' ? '#fff' : '#fff'}>
-      <Inject services={[Legend, Tooltip, LineSeries, DateTime]}/>
+    <ChartComponent id='line-chart' height='420px' primaryXAxis={LinePrimaryXAxis} primaryYAxis={LinePrimaryYAxis} chartArea={{ border: { width: 0 } }} tooltip={{ enable: true }} background={currentMode === 'Dark' ? '#fff' : '#fff'}>
+      <Inject services={[Legend, Tooltip, LineSeries, DateTime]} />
       <SeriesCollectionDirective>
-        {lineCustomSeries.map((item, i) => <SeriesDirective key={i} {...item}/>)}
+        {lineCustomSeries.map((item, i) => <SeriesDirective key={i} {...item} />)}
 
       </SeriesCollectionDirective>
     </ChartComponent>

@@ -1,13 +1,13 @@
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom';
-import {SiShopware} from 'react-icons/si';
-import {MdOutlineCancel} from 'react-icons/md';
+import { Link, NavLink } from 'react-router-dom';
+import { SiShopware } from 'react-icons/si';
+import { MdOutlineCancel } from 'react-icons/md';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
-import {links} from '../data/dummy';
+import { links } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
-  const {activeMenu, setactiveMenu, screenSize, currentColor} = useStateContext();
+  const { activeMenu, setactiveMenu, screenSize, currentColor } = useStateContext();
   const handleCloseSideBar = () => {
     if (activeMenu && screenSize <= 900) {
       setactiveMenu(false);
@@ -26,27 +26,31 @@ const Sidebar = () => {
               <SiShopware /> <span>Shoppy</span>
             </Link>
             <TooltipComponent content="Menu" position='BottomCenter'>
-                <button type='button' onClick={() => setactiveMenu((prevactiveMenu) => !prevactiveMenu)} className='text-xl rounded-full p-2 hover:bg-light-gray mt-4 block md:hidden dark:bg-light-gray'>
-                  <MdOutlineCancel />
-                </button>
+              <button type='button' onClick={() => setactiveMenu((prevactiveMenu) => !prevactiveMenu)} className='text-xl rounded-full p-2 hover:bg-light-gray mt-4 block md:hidden dark:bg-light-gray'>
+                <MdOutlineCancel />
+              </button>
             </TooltipComponent>
           </div>
           <div className='mt-10'>
-            {links.map((item) => {return (
-              <div key={item.title}>
-                <p className='text-gray-400 m-3 mt-4 uppercase'>{item.title}</p>
-                {item.links.map((link) => {return(
-                  <NavLink to={`/${link.name}`} key={link.name} onClick={handleCloseSideBar} className={({isActive}) => 
-                    isActive ? activeLink : normalLink
-                  } style={({isActive}) => ({
-                    backgroundColor: isActive ? currentColor : ''
-                  })}>
-                    {link.icon}
-                    <span className='capitalize'>{link.name}</span>
-                  </NavLink>
-                )})}
+            {links.map((item) => {
+              return (
+                <div key={item.title}>
+                  <p className='text-gray-400 m-3 mt-4 uppercase'>{item.title}</p>
+                  {item.links.map((link) => {
+                    return (
+                      <NavLink to={`/${link.name}`} key={link.name} onClick={handleCloseSideBar} className={({ isActive }) =>
+                        isActive ? activeLink : normalLink
+                      } style={({ isActive }) => ({
+                        backgroundColor: isActive ? currentColor : ''
+                      })}>
+                        {link.icon}
+                        <span className='capitalize'>{link.name}</span>
+                      </NavLink>
+                    )
+                  })}
                 </div>
-            )})}
+              )
+            })}
           </div>
         </>
       )}
