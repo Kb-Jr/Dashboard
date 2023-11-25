@@ -12,7 +12,12 @@
 - The App.js file contains the geenral layout for this project. All components including the sidebar, themesettings, Main section, navbar, header were rendered on this component. React router was imported from react-router-dom and used to navigate between different views. All paths were wrapped in a BrowserRouter component. The entire look of this component was rendered based on conditions specified such as the current theme, current mode, theme settings and the state of the menu bar (active or not). 
 
 ### Navbar
-- 
+- The major components of the navbar were created using the Navbutton. The icon was populated by icons imported from react-icons.
+- Each button was assigned props such as color, dotcolor and a custom function.
+- Tooltip component was imported from syncfusion.
+- Tooltip component was used to display the tooltip on hover.
+- Each component is rendered conditionally depending on if the button is clicked by using the '&&' operator. Thus, whenever any of the buttons is clicked, the designated component will be rendered. 
+
 ### Pages
 
 
