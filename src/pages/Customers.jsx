@@ -3,7 +3,6 @@ import { GridComponent, ColumnDirective, ColumnsDirective, Page, Selection, Edit
 
 import { customersData, customersGrid } from '../data/dummy';
 import { Header } from '../components';
-import { FILTER } from '@syncfusion/ej2/filemanager';
 
 const Customers = () => {
   return (

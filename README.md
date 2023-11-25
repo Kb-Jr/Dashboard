@@ -19,7 +19,15 @@
 - Each component is rendered conditionally depending on if the button is clicked by using the '&&' operator. Thus, whenever any of the buttons is clicked, the designated component will be rendered. 
 
 ### Pages
-
+- The pages created included a Calendar page, a color picker page, Customers page, Ecommerce Page, Editor, Employees, Kanban and orders page.
+- The Calendar page was built by importing the 'ScheduleComponent' from syncfusion as well as other components such as day, week, workweek, month, agenda, draganddrop. These were services and they were applied to the scheduleComponent using the 'inject' function which was also imported from syncfusion. 
+- The color picker page was built by importing the colorPickerComponent from syncfusion. This component had properties specified such as the id, mode, showButtons, modeSwitcher and change properties.
+- The Customers Page was built by importing the gridComponent, columnsDIrective, columnDirective as well as other services such as filter, edit, sort, page, selection and toolbar from syncfusion. The data created was mapped over in a columsdirective and for each item in the data array a columnDirective was created with the above services injected and customized. 
+- The Ecommerce page renders a series of divs displaying different data such as budget, earnings, expenses etc. Icons were imported from react icons and styled. A sparkline component was also component was also added.
+- The editor page was created by importing the richTextEditorComponent from syncfusion and adding other services such as image,link, quicktoolbar, toolbar and htmlEditor
+- The employees page was built by importing the gridComponent, columnsDIrective, columnDirective as well as other services such as page, search and toolbar from syncfusion. The data created was mapped over in a columsdirective and for each item in the data array a columnDirective was created with the above services injected and customized. 
+- The Kanban page was built by importing the KanbanComponent, the columnsDirective and ColumnDirective from syncfusion.
+- The orders page was built by importing the gridComponent, columnsDIrective, columnDirective as well as other services such as resize, page, sort, Filter, page, excelExport, pdfExport and Edit from syncfusion. The data created was mapped over in a columsdirective and for each item in the data array a columnDirective was created with the above services injected and customized. 
 
 ### Charts
 
@@ -51,3 +59,6 @@
 
 ## Resources
 - [Syncfusion Documentation](https://ej2.syncfusion.com/react/documentation)
+
+## Note
+- It is recommeded in the syncfusion docs to use a class based component when building a sparkline component as opposed to a functional component.
