@@ -1,5 +1,21 @@
 # Admin Dashboard
 
+## Table of Contents
+- [About](#about)
+- [Components](#components)
+- [App.js](#appjs)
+- [Navbar](#navbar)
+- [Pages](#pages)
+- [Apps](#apps)
+- [Charts](#charts)
+- [Mode and Themes](#mode-and-themes)
+- [Sidebar](#sidebar)
+- [Global context](#global-context)
+- [Resources](#resources)
+- [Note](#note)
+- [Screenshots](#screenshots)
+- [Acknowledgement](#acknowledgement)
+
 ## About
 - This is a dashboard built using React JS. it exhibits the power of using third party components. The third party library used for this project is Syncfusion. Syncfusion posseses already built components that are ready to use as long as the the right dependencies are used in the appropriate way. To find out more, visit the documenatation link attached in the resources section.
  
@@ -20,19 +36,25 @@
 
 ### Pages
 - The pages created included a Calendar page, a color picker page, Customers page, Ecommerce Page, Editor, Employees, Kanban and orders page.
-- The Calendar page was built by importing the 'ScheduleComponent' from syncfusion as well as other components such as day, week, workweek, month, agenda, draganddrop. These were services and they were applied to the scheduleComponent using the 'inject' function which was also imported from syncfusion. 
-- The color picker page was built by importing the colorPickerComponent from syncfusion. This component had properties specified such as the id, mode, showButtons, modeSwitcher and change properties.
+
 - The Customers Page was built by importing the gridComponent, columnsDIrective, columnDirective as well as other services such as filter, edit, sort, page, selection and toolbar from syncfusion. The data created was mapped over in a columsdirective and for each item in the data array a columnDirective was created with the above services injected and customized. 
 - The Ecommerce page renders a series of divs displaying different data such as budget, earnings, expenses etc. Icons were imported from react icons and styled. A sparkline component was also component was also added.
-- The editor page was created by importing the richTextEditorComponent from syncfusion and adding other services such as image,link, quicktoolbar, toolbar and htmlEditor
 - The employees page was built by importing the gridComponent, columnsDIrective, columnDirective as well as other services such as page, search and toolbar from syncfusion. The data created was mapped over in a columsdirective and for each item in the data array a columnDirective was created with the above services injected and customized. 
-- The Kanban page was built by importing the KanbanComponent, the columnsDirective and ColumnDirective from syncfusion.
 - The orders page was built by importing the gridComponent, columnsDIrective, columnDirective as well as other services such as resize, page, sort, Filter, page, excelExport, pdfExport and Edit from syncfusion. The data created was mapped over in a columsdirective and for each item in the data array a columnDirective was created with the above services injected and customized. 
-
-### Charts
+- All data used for each component were imported from a js file which contained arranged dummy data. 
 
 
 ### Apps
+- The Calendar app was built by importing the 'ScheduleComponent' from syncfusion as well as other components such as day, week, workweek, month, agenda, draganddrop. These were services and they were applied to the scheduleComponent using the 'inject' function which was also imported from syncfusion. 
+- The color picker app was built by importing the colorPickerComponent from syncfusion. This component had properties specified such as the id, mode, showButtons, modeSwitcher and change properties.
+- The Kanban app was built by importing the KanbanComponent, the columnsDirective and ColumnDirective from syncfusion.
+- The editor app was created by importing the richTextEditorComponent from syncfusion and adding other services such as image,link, quicktoolbar, toolbar and htmlEditor.
+
+
+### Charts
+- The Charts built included an Area Chart, barChart, LineChart, pie, fiancial, pyramid and stacked chart. 
+- Each of the charts were built following the specifications from the syncfusion documentations.
+- The data used to populate the charts were imported from a js file which contained arranged dummy data.
 
 
 ### Mode and Themes
@@ -51,10 +73,12 @@
 - Stylings were applied to the the components using tailwind css. Variables were created and the values assigned to these variables were tailwind css styles stored in strings. That way, styles can be rendered conditionally by rendering each variable conditionally. This is especially seen for the navlinks. 
 
 
-### NavBar
-
-
 ### Global Context
+- The Global context was used to create variables that we wanted to be accessible to different components we were building.
+- This was done by creating a context provider file. In this file the createContext hook and useContext hook were imported.
+- The state for activeMenu, currentColor, isClicked, currentMode, themeSettings were created using the useState hook.
+- This component returned a statContext.provider hook which takes in values such as the states created in this file and others. 
+- The component was exxported and as such any other component that needs to use a state from this provider, just needs to import the useStateContext and create the needed states by calling the useStateContext(). That way the state has access to the state that the useStateContext is providing.  
 
 
 ## Resources
@@ -62,3 +86,8 @@
 
 ## Note
 - It is recommeded in the syncfusion docs to use a class based component when building a sparkline component as opposed to a functional component.
+
+
+## Screenshots
+
+## Acknowledgement
